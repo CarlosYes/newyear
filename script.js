@@ -1,9 +1,10 @@
-'use strict';
-console.clear();
-
 // This is a prime example of what starts out as a simple project
 // and snowballs way beyond its intended size. It's a little clunky
 // reading/working on this single file, but here it is anyways :)
+
+'use strict';
+console.clear();
+
 
 const IS_MOBILE = window.innerWidth <= 640;
 const IS_DESKTOP = window.innerWidth > 800;
@@ -756,9 +757,6 @@ function randomShellName() {
 }
 
 function randomShell(size) {
-	// Special selection for codepen header.
-	if (IS_HEADER) return randomFastShell()(size);
-	// Normal operation
 	return shellTypes[randomShellName()](size);
 }
 
@@ -1121,7 +1119,7 @@ let isUpdatingSpeed = false;
 
 function handlePointerStart(event) {
 	activePointerCount++;
-	const btnSize = 150;
+	const btnSize = 50;
 	
 	if (event.y < btnSize) {
 		if (event.x < btnSize) {
@@ -1594,7 +1592,7 @@ function floralEffect(star) {
 	// Queue burst flash render
 	BurstFlash.add(star.x, star.y, 46);
 	soundManager.playSound('burstSmall');
-} 
+}
 
 // Floral burst with willow stars
 function fallingLeavesEffect(star) {

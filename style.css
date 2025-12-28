@@ -9,12 +9,12 @@ body {
 }
 
 html {
-  background-color: #4F4F4F;
+  background-color: #000;
 }
 
 body {
   overflow: hidden;
-  color: #4F4F4F;
+  color: rgba(255, 255, 255, 0.5);
   font-family: "Russo One", arial, sans-serif;
   line-height: 1.25;
   letter-spacing: 0.06em;
@@ -36,12 +36,9 @@ body {
 
 .container {
   height: 100%;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .loading-init {
@@ -75,7 +72,6 @@ body {
 .canvas-container {
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-filter 0.3s;
   transition: -webkit-filter 0.3s;
   transition: filter 0.3s;
   transition: filter 0.3s, -webkit-filter 0.3s;
@@ -92,11 +88,8 @@ body {
   top: 0;
   width: 100%;
   padding-bottom: 50px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  justify-content: space-between;
   transition: opacity 0.3s, visibility 0.3s;
 }
 @media (min-width: 840px) {
@@ -114,26 +107,19 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
-  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  background-color: rgba(0, 0, 0, 0.42);
   transition: opacity 0.3s, visibility 0.3s;
 }
 .menu__inner-wrap {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .menu__header {
@@ -157,12 +143,9 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 .menu .form-option {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   margin: 16px 0;
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .menu .form-option label {
@@ -211,16 +194,14 @@ body {
 
 .btn {
   opacity: 0.16;
-  width: 200px;
-  height: 200px;
-  display: -webkit-box;
+  width: 50px;
+  height: 50px;
   display: flex;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: default;
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .btn--bright {
@@ -256,22 +237,17 @@ body {
 }
 
 .help-modal {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   visibility: hidden;
-  -webkit-transition-property: visibility;
   transition-property: visibility;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  transition-duration: 0.25s;
 }
 .help-modal__overlay {
   position: absolute;
@@ -280,21 +256,14 @@ body {
   left: 0;
   right: 0;
   opacity: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  transition-timing-function: ease-in;
+  transition-duration: 0.25s;
 }
 .help-modal__dialog {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   max-width: 400px;
   max-height: calc(100vh - 100px);
   margin: 10px;
@@ -304,14 +273,11 @@ body {
   opacity: 0;
   -webkit-transform: scale(0.9, 0.9);
           transform: scale(0.9, 0.9);
-  -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  transition-timing-function: ease-in;
+  transition-duration: 0.25s;
 }
 @media (min-width: 840px) {
   .help-modal__dialog {
@@ -344,10 +310,9 @@ body {
   font-family: "Russo One", arial, sans-serif;
   font-size: 1em;
   color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;      
+  text-transform: uppercase;
   letter-spacing: 0.06em;
   background-color: rgba(255, 255, 255, 0.25);
-  -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 .help-modal__close-btn:hover, .help-modal__close-btn:active, .help-modal__close-btn:focus {
@@ -356,22 +321,17 @@ body {
 }
 .help-modal.active {
   visibility: visible;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 .help-modal.active .help-modal__overlay {
   opacity: 1;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+  transition-duration: 0.4s;
 }
 .help-modal.active .help-modal__dialog {
   opacity: 1;
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+  transition-duration: 0.4s;
 }
